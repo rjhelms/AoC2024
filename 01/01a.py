@@ -1,6 +1,10 @@
+from time import perf_counter
+
 IN_FILE = "01/input.txt"
 
 if __name__ == "__main__":
+    start_time = perf_counter()
+
     score = 0
     left = []
     right = []
@@ -13,7 +17,10 @@ if __name__ == "__main__":
     left.sort()
     right.sort()
     for i in range(len(left)):
-        print(left[i], right[i], abs(right[i] - left[i]))
+        # print(left[i], right[i], abs(right[i] - left[i]))
         score += abs(right[i] - left[i])
-    
+
     print(score)
+
+    end_time = perf_counter()
+    print(f"Execution time: {end_time-start_time:.3f}s")
