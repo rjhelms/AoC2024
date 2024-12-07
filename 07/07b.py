@@ -25,6 +25,11 @@ if __name__ == "__main__":
                     result *= CALIBRATIONS[cal][j + 1]
                 elif i[j] == 2:
                     result = int(str(result) + str(CALIBRATIONS[cal][j + 1]))
+
+                # since all operations increase result, escape if it's already exceeded the target
+                if result > cal:
+                    break
+
             if result == cal:
                 score += cal
                 break
