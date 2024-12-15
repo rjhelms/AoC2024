@@ -1,5 +1,6 @@
 from time import perf_counter
 from collections import defaultdict
+import os
 
 IN_FILE = "15/input.txt"
 
@@ -9,6 +10,8 @@ MOVE_VECTORS = {"^": (0, -1), ">": (1, 0), "v": (0, 1), "<": (-1, 0)}
 
 WORLD_X = 0
 WOLRD_Y = 0
+
+VISUALIZE = True
 
 
 class Tile:
@@ -170,7 +173,7 @@ class Tile:
 
 class Wall(Tile):
     size = 2
-    string = "#"
+    string = "█"
 
     # walls never move
     def try_move(self, direction: str):
@@ -191,18 +194,20 @@ class Box(Tile):
 
 
 class Robot(Tile):
-    string = "@"
+    string = "☻"
     pass
 
 
 def draw_map():
+    os.system("")
+    print("\033[H")
     for y in range(WORLD_Y):
         for x in range(WORLD_X):
             tile = MAP[x, y]
             if tile:
                 print(tile.string_at_pos((x, y)), end="")
             else:
-                print(".", end="")
+                print(" ", end="")
         print()
 
 
@@ -237,13 +242,14 @@ if __name__ == "__main__":
                     WORLD_Y = y
                     WORLD_X = len(line.strip()) * 2
 
-    # draw_map()
+    if VISUALIZE:
+        os.system("cls")
+        draw_map()
 
     for char in instructions:
-        robot.do_move(char)
-
-    # print()
-    # draw_map()
+        result = robot.do_move(char)
+        if VISUALIZE:
+            draw_map()
 
     score = 0
 
