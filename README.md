@@ -28,5 +28,6 @@ Collection of my solutions for Advent of Code 2024. Unless I feel like doing som
 | 20   | Dec 22, 1:57p  | 455.9s | 247.9s |  |
 | 21   |                | 0.020s |        |  |
 | 22   | Dec 22, 5:05p  | 0.901s | 14.17s |  |
+| 23   |                | 0.022s |        |  |
 
 Completion/refactor timestamps `tz=America/Toronto`. Execution times in *italics* indicate a significant improvement from refactoring after the puzzle was completed and submitted.
