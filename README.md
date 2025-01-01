@@ -26,7 +26,7 @@ Collection of my solutions for Advent of Code 2024. Unless I feel like doing som
 | 18   | Dec 21, 7:18p  | 0.029s | 1.379s |  |
 | 19   | Dec 22, 12:18p | 0.072s | 0.388s |  |
 | 20   | Dec 22, 1:57p  | 455.9s | 247.9s |  |
-| 21   |                | 0.020s |        |  |
+| 21   | Jan 1, 4:43p   | 0.020s | 0.003  |  |
 | 22   | Dec 22, 5:05p  | 0.901s | 14.17s |  |
 | 23   | Dec 23, 1:02p  | 0.022s | 0.015s |  |
 | 24   |                | 0.001s |        |  |
