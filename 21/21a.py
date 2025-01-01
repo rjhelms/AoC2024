@@ -56,8 +56,11 @@ def get_moves(position: tuple[int], target: str, pad: dict) -> list[str]:
             return [x_str + y_str + "A"]
         elif (position[1] == pad[None][1]) and (target_pos[0] == pad[None][0]):
             return [y_str + x_str + "A"]
-
-        return [x_str + y_str + "A", y_str + x_str + "A"]
+        else:
+            if "<" in x_str:
+                return [x_str + y_str + "A"]
+            else:
+                return [y_str + x_str + "A"]
 
 
 def get_paths(targets: list[str], pad: dict) -> list[str]:
